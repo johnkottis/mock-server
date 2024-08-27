@@ -1,9 +1,14 @@
+// models/clientModel.js
+
 let clients = [
   { id: 1, name: 'Client A', industry: 'Finance' },
   { id: 2, name: 'Client B', industry: 'Healthcare' },
 ];
 
-// Simulate auto-increment ID
+const getClients = () => {
+  return clients;
+};
+
 const addClient = (client) => {
   const newClient = {
     id: clients.length + 1,
@@ -13,11 +18,7 @@ const addClient = (client) => {
   return newClient;
 };
 
-const getClients = () => {
-  return clients;
-};
-
 module.exports = {
-  addClient,
   getClients,
+  addClient,
 };
